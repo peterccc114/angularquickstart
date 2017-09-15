@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <form role="form">
+        <div class="form-group">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="User Name" name="username" [(ngModel)]="username"/>
+        </div>
+        <div class="form-group">
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Password" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" (click)="logIn()" >login</button>
+            <button class="btn btn-warning" (click)="register()">register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<div *ngIf="userdata">
+    {{userdata.type}}<br>
+    {{userdata.data._id}}<br>
+    {{userdata.data.token}}
+    {{returnUrl}}
+</div>
+
